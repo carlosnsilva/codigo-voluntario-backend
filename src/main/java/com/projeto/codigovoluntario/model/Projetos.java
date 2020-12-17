@@ -17,6 +17,7 @@ public class Projetos {
     private String url;
     private String descricao;
     private String tecnologias;
+    private Long id_User;
 
     public Long getId() {
         return id;
@@ -53,4 +54,13 @@ public class Projetos {
     public void setTecnologias(String tecnologias) {
         this.tecnologias = tecnologias;
     }
+
+    public Long getId_User() {
+        return id_User;
+    }
+
+    public void setId_User(Long id_User) {
+        this.id_User = id_User;
+    }
+
 }
