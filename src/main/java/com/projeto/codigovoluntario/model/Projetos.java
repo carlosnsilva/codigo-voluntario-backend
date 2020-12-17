@@ -13,22 +13,30 @@ public class Projetos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome;
+    private String name;
     private String url;
-    private String descricao;
-    private String tecnologias;
+    private String description;
+    private String tags;
     private Long id_User;
 
     public Long getId() {
         return id;
     }
 
-    public String getNome() {
-        return nome;
+    public Long getId_User() {
+        return id_User;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setId_User(Long id_User) {
+        this.id_User = id_User;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getUrl() {
@@ -39,28 +47,20 @@ public class Projetos {
         this.url = url;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getTecnologias() {
-        return tecnologias;
+    public String getTags() {
+        return tags;
     }
 
-    public void setTecnologias(String tecnologias) {
-        this.tecnologias = tecnologias;
-    }
-
-    public Long getId_User() {
-        return id_User;
-    }
-
-    public void setId_User(Long id_User) {
-        this.id_User = id_User;
+    public void setTags(String tags) {
+        this.tags = tags;
     }
 
 }

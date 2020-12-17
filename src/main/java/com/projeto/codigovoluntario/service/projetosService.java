@@ -47,25 +47,25 @@ public class projetosService {
         return projectRepository.findById(id)
                 .map(body -> {
                     Projetos projetoAntigo = projectRepository.findById(id).orElse(null);
-                    if(project.getNome() == null){
-                        project.setNome(projetoAntigo.getNome());
+                    if(project.getName() == null){
+                        project.setName(projetoAntigo.getName());
 
                     }
-                    if(project.getDescricao() == null){
-                        project.setDescricao(projetoAntigo.getDescricao());
+                    if(project.getDescription() == null){
+                        project.setDescription(projetoAntigo.getDescription());
 
                     }
-                    if(project.getTecnologias() == null){
-                        project.setTecnologias(projetoAntigo.getTecnologias());
+                    if(project.getTags() == null){
+                        project.setTags(projetoAntigo.getTags());
 
                     }
                     if(project.getUrl() == null){
                         project.setUrl(projetoAntigo.getUrl());
                     }
 
-                    body.setNome(project.getNome());
-                    body.setDescricao(project.getDescricao());
-                    body.setTecnologias(project.getTecnologias());
+                    body.setName(project.getName());
+                    body.setDescription(project.getDescription());
+                    body.setTags(project.getTags());
                     body.setUrl(project.getUrl());
 
                     Projetos p = projectRepository.save(body);
