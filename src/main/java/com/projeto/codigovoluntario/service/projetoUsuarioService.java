@@ -19,7 +19,7 @@ public class projetoUsuarioService {
     }
 
     public projetoUsuario getProjectUserPorId(Long idProjectUser){
-        return this.projectUserRepository.findById(idProjectUser).orElse(null)r;
+        return this.projectUserRepository.findById(idProjectUser).orElse(null);
     }
 
     public projetoUsuario insertProjectUser(projetoUsuario projectUser){
